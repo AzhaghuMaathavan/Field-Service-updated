@@ -9,12 +9,17 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: [
-    'https://field-service-updated-n2oofqubp-azhaghum aathavan.vercel.app',
-    'https://field-service-updated.vercel.app',
-    'http://localhost:5173',
-    'http://localhost:3000'
-  ],
+  origin: function(origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin || origin === 'http://localhost:5173' || origin === 'http://localhost:3000') {
+      callback(null, true);
+    } else if (origin && origin.includes('vercel.app')) {
+      // Allow all Vercel deployments
+      callback(null, true);
+    } else {
+      callback(null, true); // Allow for now, can restrict later
+    }
+  },
   credentials: true
 }));
 
