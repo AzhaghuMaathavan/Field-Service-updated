@@ -9,9 +9,9 @@ const CustomerDashboard = () => {
   const [activeTab, setActiveTab] = useState('requests');
   const [showRequestModal, setShowRequestModal] = useState(false);
   const [requests, setRequests] = useState([
-    { id: 1, title: 'AC Not Working', status: 'In Progress', assignedTech: 'Mike Davis', createdDate: '2025-01-12', dueDate: '2025-01-15', priority: 'High' },
+    { id: 1, title: 'AC Not Working', status: 'In Progress', assignedTech: 'Azhaghu Maathavan', createdDate: '2025-01-12', dueDate: '2025-01-15', priority: 'High' },
     { id: 2, title: 'Heater Maintenance', status: 'Pending', assignedTech: 'Pending Assignment', createdDate: '2025-01-14', dueDate: '2025-01-17', priority: 'Medium' },
-    { id: 3, title: 'Plumbing Check', status: 'Completed', assignedTech: 'John Smith', createdDate: '2025-01-05', dueDate: '2025-01-10', priority: 'Low' },
+    { id: 3, title: 'Plumbing Check', status: 'Completed', assignedTech: 'Anukanth', createdDate: '2025-01-05', dueDate: '2025-01-10', priority: 'Low' },
   ]);
   const [newRequest, setNewRequest] = useState({ title: '', description: '', priority: 'Medium', preferredDate: '' });
 
@@ -110,13 +110,6 @@ const CustomerDashboard = () => {
                       <p><strong>👤 Assigned Tech:</strong> {request.assignedTech}</p>
                       <p><strong>Priority:</strong> <span className={`priority ${request.priority.toLowerCase()}`}>{request.priority}</span></p>
                     </div>
-                  </div>
-
-                  <div className="request-actions">
-                    <button className="btn-secondary">View Details</button>
-                    {request.status !== 'Completed' && (
-                      <button className="btn-small danger">Cancel</button>
-                    )}
                   </div>
                 </div>
               ))}

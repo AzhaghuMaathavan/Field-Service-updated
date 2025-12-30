@@ -8,9 +8,9 @@ const ManagerDashboard = () => {
   const { logout } = useAuth();
   const [activeTab, setActiveTab] = useState('tasks');
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Air Conditioner Repair', customer: 'John Doe', technician: 'Mike Davis', status: 'In Progress', priority: 'High', dueDate: '2025-01-15' },
-    { id: 2, title: 'Heating System Maintenance', customer: 'Jane Smith', technician: 'Sarah Johnson', status: 'Pending', priority: 'Medium', dueDate: '2025-01-16' },
-    { id: 3, title: 'Plumbing Installation', customer: 'Bob Wilson', technician: 'John Smith', status: 'Completed', priority: 'Low', dueDate: '2025-01-10' },
+    { id: 1, title: 'Air Conditioner Repair', customer: 'Azhaghu Maathavan', technician: 'Aadithya', status: 'In Progress', priority: 'High', dueDate: '2025-01-15' },
+    { id: 2, title: 'Heating System Maintenance', customer: 'Anukanth', technician: 'Dhanvanthbala', status: 'Pending', priority: 'Medium', dueDate: '2025-01-16' },
+    { id: 3, title: 'Plumbing Installation', customer: 'Aadithya', technician: 'Azhaghu Maathavan', status: 'Completed', priority: 'Low', dueDate: '2025-01-10' },
   ]);
   const [showTaskModal, setShowTaskModal] = useState(false);
   const [newTask, setNewTask] = useState({ title: '', customer: '', technician: '', priority: 'Medium', dueDate: '' });
@@ -35,8 +35,8 @@ const ManagerDashboard = () => {
     setTasks(tasks.map(task => task.id === id ? {...task, status: newStatus} : task));
   };
 
-  const technicians = ['Mike Davis', 'Sarah Johnson', 'John Smith', 'Alex Turner'];
-  const customers = ['John Doe', 'Jane Smith', 'Bob Wilson', 'Alice Brown'];
+  const technicians = ['Azhaghu Maathavan', 'Anukanth', 'Aadithya', 'Dhanvanthbala'];
+  const customers = ['Azhaghu Maathavan', 'Anukanth', 'Aadithya', 'Dhanvanthbala'];
 
   return (
     <div className="dashboard-container manager-dashboard">

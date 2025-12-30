@@ -8,9 +8,9 @@ const EmployeeDashboard = () => {
   const { logout } = useAuth();
   const [activeTab, setActiveTab] = useState('tasks');
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Air Conditioner Repair', customer: 'John Doe', status: 'In Progress', priority: 'High', dueDate: '2025-01-15', address: '123 Main St, City' },
-    { id: 2, title: 'Heating System Check', customer: 'Jane Smith', status: 'Assigned', priority: 'Medium', dueDate: '2025-01-16', address: '456 Oak Ave, City' },
-    { id: 3, title: 'Plumbing Installation', customer: 'Bob Wilson', status: 'Completed', priority: 'Low', dueDate: '2025-01-10', address: '789 Pine Rd, City' },
+    { id: 1, title: 'Air Conditioner Repair', customer: 'Azhaghu Maathavan', status: 'In Progress', priority: 'High', dueDate: '2025-01-15', address: '123 Main St, City' },
+    { id: 2, title: 'Heating System Check', customer: 'Anukanth', status: 'Assigned', priority: 'Medium', dueDate: '2025-01-16', address: '456 Oak Ave, City' },
+    { id: 3, title: 'Plumbing Installation', customer: 'Aadithya', status: 'Completed', priority: 'Low', dueDate: '2025-01-10', address: '789 Pine Rd, City' },
   ]);
 
   const handleLogout = () => {
